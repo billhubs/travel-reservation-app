@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <h2>Reservations</h2>
+    <ul>
+        {% for reservation in reservations %}
+            <li>
+                {{ reservation.name }} - {{ reservation.service_type }} - {{ reservation.status }}
+                <a href="#">Approve</a> | <a href="#">Reject</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
